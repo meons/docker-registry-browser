@@ -5,7 +5,7 @@ parameters:
 
 services:
     registry_manager:
-        class: AppBundle\Registry\Registry\RegistryManager
+        class: AppBundle\Registry\RegistryManager
         arguments: ['@logger', '%registry_baseuri%']
         tags:
             - { name: monolog.logger, channel: registry }

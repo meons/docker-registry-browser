@@ -1,6 +1,6 @@
 <?php
 
-namespace AppBundle\Registry\Registry;
+namespace AppBundle\Registry;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
