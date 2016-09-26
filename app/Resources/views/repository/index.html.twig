@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {{ dump(repositories) }}
+    <ul>
+    {% for repository in repositories %}
+        <li><a href="{{ path('repository_show', { 'repository': repository }) }}">{{ repository }}</a></li>
+    {% endfor %}
+    </ul>
 {% endblock %}

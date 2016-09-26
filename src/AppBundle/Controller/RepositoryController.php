@@ -13,6 +13,7 @@ class RepositoryController extends Controller
 {
     /**
      * @Route("/", name="repository_index")
+     * @Method("GET")
      */
     public function indexAction()
     {
@@ -20,6 +21,19 @@ class RepositoryController extends Controller
 
         return $this->render('repository/index.html.twig', array(
             'repositories' => $rm->getRepositories(),
+        ));
+    }
+
+    /**
+     * @Route("/{repository}", name="repository_show")
+     * @Method("GET")
+     */
+    public function showAction($repository)
+    {
+        $rm = $this->get('registry_manager');
+
+        return $this->render('repository/show.html.twig', array(
+            'tags' => $rm->getTags($repository),
         ));
     }
 }
