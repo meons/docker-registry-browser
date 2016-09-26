@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * @Route("/repository")
  */
-class ImageController extends Controller
+class RepositoryController extends Controller
 {
     /**
      * @Route("/", name="repository_index")
